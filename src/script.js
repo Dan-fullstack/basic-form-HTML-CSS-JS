@@ -12,10 +12,10 @@ console.log(counter)
 let index = 1
 
 buttonNavMain.addEventListener('mouseenter', function(ev){
-    buttonNav.src = '../img/arrowPurple.png'
+    buttonNav.src = 'img/arrowPurple.png'
 })
 buttonNavMain.addEventListener('mouseleave', function(ev){
-    buttonNav.src = '../img/arrowWhite.png'
+    buttonNav.src = 'img/arrowWhite.png'
 })
 
 seletores.forEach((li)=>{
