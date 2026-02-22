@@ -1,0 +1,422 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+#colors {
+  buttonColor: #5B3ACC;
+  titleColor: #0a1f44;
+  textColor: #5b617c;
+  textSecondaryColor: #5b617c;
+}
+header {
+  max-width: 1540px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 20px 8px 20px;
+}
+@media screen and (max-width: 760px) {
+  header {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+header img {
+  width: 120px;
+  margin-right: 4px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+header img:hover {
+  transform: rotate(-10deg) scale(1.1);
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+@media screen and (max-width: 760px) {
+  header nav {
+    flex-direction: column;
+  }
+}
+header nav a {
+  text-decoration: none;
+  color: #5b617c;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+header nav a:hover {
+  color: #5B3ACC;
+  transform: scale(1.05);
+}
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background-color: #5B3ACC;
+  width: 180px;
+  height: 48px;
+  border-radius: 16px;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 700px;
+  color: white;
+  text-wrap: nowrap;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+header div:hover {
+  color: #5B3ACC;
+  background-color: white;
+  border: 2px solid #5B3ACC;
+}
+header div img {
+  width: 16px;
+}
+section {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+section .formSectionTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  font-weight: 600;
+}
+section .formSectionTitle span {
+  color: #5B3ACC;
+}
+section .formSectionTitle .loading {
+  color: #5b617c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+section .formSectionTitle .loading .circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 4px solid #5b617c;
+  transition: 1s ease-in-out;
+}
+section .formSectionTitle .loading p span {
+  color: #5b617c;
+  transition: 1s ease-in;
+}
+section .formPainel {
+  margin: 40px auto 0px auto ;
+  position: relative;
+  padding-bottom: 50px;
+  width: 900px;
+}
+section .formPainel .first {
+  position: absolute;
+  opacity: 1;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.8s ease-in-out;
+}
+section .formPainel .first h1 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+section .formPainel .first p {
+  text-align: center;
+  width: 60%;
+  color: #5b617c;
+  font-weight: 600;
+  margin-bottom: 56px;
+}
+section .formPainel .first ul {
+  display: flex;
+  margin-bottom: 80px;
+  list-style: none;
+  gap: 100px;
+  padding: 20px;
+  overflow: hidden;
+}
+section .formPainel .first ul li {
+  text-align: center;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 260px;
+  border-radius: 20px;
+}
+section .formPainel .first ul li:hover {
+  transform: scale(1.1);
+  border: 1px solid #5B3ACC;
+}
+section .formPainel .first ul li p {
+  text-align: center;
+  color: #5B3ACC;
+  margin-top: 16px;
+  margin-bottom: 4px;
+}
+section .formPainel .first ul li p.cor {
+  color: white;
+}
+section .formPainel .first .button {
+  width: 80%;
+  text-align: end;
+  height: 60px;
+}
+section .formPainel .first .button button {
+  padding: 14px 36px;
+  border: none;
+  background-color: #5B3ACC;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+section .formPainel .first .button button:hover {
+  transform: scale(1.1) rotate(-5deg);
+  background-color: white;
+  color: #5B3ACC;
+  border: 1px solid #5B3ACC;
+}
+section .formPainel .second {
+  position: absolute;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 900px;
+  height: 660px;
+  transition: 0.8s ease-in-out;
+}
+section .formPainel .second h1 {
+  text-align: center;
+  width: 459px;
+  height: 48px;
+  margin-bottom: 16px;
+  transform: translate(0, -60px);
+}
+section .formPainel .second p {
+  text-align: center;
+  width: 540px;
+  color: #5b617c;
+  font-weight: 600;
+  margin-bottom: 56px;
+  height: 100px;
+  transform: translate(0, -60px);
+}
+section .formPainel .second form {
+  height: 260px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  transform: translate(0, -60px);
+  margin: 0 auto;
+}
+section .formPainel .second form div {
+  margin: 0 auto;
+  position: relative;
+  width: 400px;
+  height: 70px;
+}
+section .formPainel .second form div input {
+  width: 100%;
+  height: 100%;
+  padding: 12px 24px;
+  font-weight: 600;
+  color: #5b617c;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  box-shadow: inset 1px 2px 10px #5b617c;
+  font-size: 16px;
+}
+section .formPainel .second form div label {
+  position: absolute;
+  top: 28%;
+  left: 5%;
+  font-weight: 600;
+  font-size: 16px;
+  color: #5b617c;
+  transition: 0.5s ease;
+}
+section .formPainel .second form div input:focus + label,
+section .formPainel .second form div input:not(:placeholder-shown) + label {
+  top: -22%;
+  left: 3%;
+  background-color: #5B3ACC;
+  color: white;
+  padding: 1px 4px;
+  border-radius: 10px;
+}
+section .formPainel .second .button {
+  width: 720px;
+  height: 60px;
+  transform: translate(0, 60px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .formPainel .second .button button {
+  padding: 14px 36px;
+  border: none;
+  background-color: #5B3ACC;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+section .formPainel .second .button button:hover {
+  transform: scale(1.1) rotate(-5deg);
+  background-color: white;
+  color: #5B3ACC;
+  border: 1px solid #5B3ACC;
+}
+section .formPainel .second .button span {
+  cursor: pointer;
+  font-weight: 600;
+  color: #5b617c;
+  transition: 1s ease-in-out;
+  padding: 8px 16px;
+  border-radius: 10px;
+}
+section .formPainel .second .button span:hover {
+  border: 2px solid #5b617c;
+}
+section .formPainel .third {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 900px;
+  height: 660px;
+  transition: 0.8s ease-in-out;
+}
+section .formPainel .third h1 {
+  text-align: center;
+  width: 459px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+section .formPainel .third p {
+  text-align: center;
+  width: 540px;
+  color: #5b617c;
+  font-weight: 600;
+  margin-bottom: 56px;
+  height: 100px;
+}
+section .formPainel .third form {
+  height: 260px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 0 auto;
+}
+section .formPainel .third form div {
+  margin: 0 auto;
+  position: relative;
+  width: 400px;
+  height: 70px;
+}
+section .formPainel .third form div input {
+  width: 100%;
+  height: 100%;
+  padding: 12px 24px;
+  font-weight: 600;
+  color: #5b617c;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  box-shadow: inset 1px 2px 10px #5b617c;
+  font-size: 16px;
+}
+section .formPainel .third form div label {
+  position: absolute;
+  top: 28%;
+  left: 5%;
+  font-weight: 600;
+  font-size: 16px;
+  color: #5b617c;
+  transition: 0.5s ease;
+}
+section .formPainel .third form div input:focus + label,
+section .formPainel .third form div input:not(:placeholder-shown) + label {
+  top: -22%;
+  left: 3%;
+  background-color: #5B3ACC;
+  color: white;
+  padding: 1px 4px;
+  border-radius: 10px;
+}
+section .formPainel .third p.terms {
+  transform: translate(0, -100px);
+}
+section .formPainel .third p.terms span {
+  color: #5B3ACC;
+  cursor: pointer;
+}
+section .formPainel .third .button {
+  width: 720px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .formPainel .third .button button {
+  padding: 14px 36px;
+  border: none;
+  background-color: #5B3ACC;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+section .formPainel .third .button button:hover {
+  transform: scale(1.1) rotate(-5deg);
+  background-color: white;
+  color: #5B3ACC;
+  border: 1px solid #5B3ACC;
+}
+section .formPainel .third .button span {
+  cursor: pointer;
+  font-weight: 600;
+  color: #5b617c;
+  transition: 1s ease-in-out;
+  padding: 8px 16px;
+  border-radius: 10px;
+}
+section .formPainel .third .button span:hover {
+  border: 2px solid #5b617c;
+}
+.selecionado {
+  transform: scale(1.1);
+  border: 1px solid #5B3ACC;
+  background-color: #5B3ACC;
+}
